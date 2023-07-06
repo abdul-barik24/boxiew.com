@@ -6,14 +6,12 @@
 #single-product{ margin-top: $margin-section; margin-bottom: $margin-max;
     .container{
         .single-p-wrapping{
-            .product-url{
-                li{
-                    a{
-                        color: $text-color;
-                        font-size: $text-font-size;
-                        &:hover{color: $primary-color;}
-                        // &:visited{color: $visited-color;}
-                    }
+            .product-url{ margin-left: -$margin-normal;
+                a{
+                    color: $text-color;
+                    font-size: $text-font-size;
+                    &:hover{color: $primary-color;}
+                    // &:visited{color: $visited-color;}
                 }
             }
 
@@ -38,6 +36,13 @@
                             .shop-now{
                                 a{
                                     color: $primary-color;
+                                }
+                                transition: .3s;
+                                &:hover{
+                                    i{
+                                        transform: scale(1.2);
+                                        margin-left: $padding-min-extra;
+                                    }
                                 }
                             }
                         }
