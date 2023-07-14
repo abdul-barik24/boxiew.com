@@ -5,7 +5,7 @@
 // @import "./partials/variables";        //ok
 // @use "./partials/variables" as *;        // ok
 
-@use "abstract" as *;
+
 @use "partials" as *;
 @use "pages" as *;
 @use "base" as *;
@@ -17,7 +17,10 @@
 nav{ height: 5rem !important; background-color: $body-color; position: fixed; z-index: 1000;
     div{
         div{
-            ul{ .add-listing{border: 1px solid $primary-color; border-radius: 3rem; 
+            ul{ 
+                .add-listing{
+                border: 1px solid $primary-color;
+                border-radius: 3rem; 
                 // &:hover{ background-color: $primary-color;}
             }
                 li{ margin-left: $margin-min;
@@ -25,10 +28,10 @@ nav{ height: 5rem !important; background-color: $body-color; position: fixed; z-
                         &:hover{color: $primary-color !important;}
                     }                   
                     .sign-in{ margin-right: $margin-min;}
-                    .add-listing-icon{ margin-left: $margin-min;}
+                    // .add-listing-icon{ margin-left: $margin-min;}
                     div{ 
                         a{color: $primary-color !important;
-                            // &:hover{color:white !important;}
+                            &:hover{color:white !important;}
                         }               
                     }
                     img{width: 1.01rem; margin-bottom: .2rem}
@@ -279,10 +282,17 @@ nav{ height: 5rem !important; background-color: $body-color; position: fixed; z-
                     padding-bottom: $padding-section-title;
                 }
                 .contact-info{
-                    color: $text-color-light;
-                    div{padding-bottom: $padding-min;
-                        i{padding-right: $padding-min;}
-                    }
+                   a{
+                     color: $text-color-light;
+                     font-size: $text-font-size;
+                     transition: .3s;
+                     i{
+                        margin-right: $margin-min;
+                     }
+                     &:hover{
+                        color: $title-color-light;
+                     }
+                   }
                 }
             }
 
@@ -324,6 +334,142 @@ nav{ height: 5rem !important; background-color: $body-color; position: fixed; z-
 
 }
 // footer css end
+
+
+
+
+
+// media query for responsive start
+@media (min-width: $viewport-xm) {
+    body{
+        h1,h2,h3  {
+            font-size: 100%;
+        }
+        
+        h4,h5,h6{
+            font-size: 90%;
+        }
+        p{
+            font-size: 85% !important;
+        }
+        a{
+            font-size: 82%;
+        }
+
+        .button .button-light{
+            padding: .2rem 1rem;
+        }
+
+    }
+
+    #footer{
+        a{
+            font-size: 80% !important;
+        }
+    }
+
+  }
+
+  @media (min-width: $viewport-sm){
+    h4,h5,h6{
+        font-size: 95%;
+    }
+  }
+
+  @media (min-width: $viewport-md) {
+    body{
+        h1,h2,h3 {
+            font-size: 130%;
+        }
+        
+        h4,h5,h6{
+            font-size: 100%;
+        }
+        p{
+            font-size: 95% !important;
+        }
+        a{
+            font-size: 90%;
+        }
+
+        .button .button-light{
+            padding: .3rem 1.4rem;
+        }
+        
+    }
+
+  }
+
+  @media (min-width: $viewport-lg) {
+    body{
+        h1,h2 ,h3{
+            font-size: 150%;
+        }
+        p{
+            font-size: 100% !important;
+        }
+        a{
+            font-size: 92%;
+        }
+        
+    }
+
+    #footer{
+        a{
+            font-size: 85% !important;
+        }
+    }
+
+  }
+
+  @media (min-width: $viewport-xl) {
+    body{
+        h1,h2,h3 {
+            font-size: 175%;
+        }
+        p{
+            // font-size: 115% !important;
+        }
+        a{
+            font-size: 100%;
+        }
+
+        .button .button-light{
+            padding: .3rem 1.5rem;
+        }
+        
+    }
+
+    #footer{
+        a{
+            font-size: 95% !important;
+        }
+    }
+
+  }
+
+  @media (min-width: $viewport-xxl) {
+    body{
+        h1, h2,h3 {
+            font-size: 200%;
+        }
+        p{
+            // font-size: 125% !important;
+        }
+        a{
+            // font-size: 100%;
+        }
+
+        .button .button-light{
+            // padding: .3rem 2rem;
+        }
+        
+    }
+
+  }
+
+
+
 
 
 

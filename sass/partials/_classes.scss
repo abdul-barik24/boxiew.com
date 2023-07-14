@@ -1,4 +1,4 @@
-@use "../abstract" as *;
+@use "../base" as *;
 @use "../partials/variables" as *;
 
 
@@ -40,8 +40,8 @@
 .text-style{
     color: $text-color;
     font-size: $text-font-size;
-    text-align: justify;
-    text-align-last: left;
+    // text-align: justify;
+    // text-align-last: left;
 }
 
 .box-shadow{
@@ -128,7 +128,7 @@
     color: $btn-color-light;
     background-color: $primary-color;
     border-radius: 1rem;
-    padding: .3rem 2rem;
+    padding: $padding-btn-y $padding-btn-x;
     transition: .3s;
     cursor: pointer;
     &:hover{
@@ -145,6 +145,16 @@
         color: $btn-color-light;
     }
 }
+
+.button-light{
+    @extend .button;
+    background-color: $body-color;
+    color: $primary-color;
+    &:hover{
+        background-color: $bg-color;
+    }
+}
+
 .add-cart{
     @extend .button;
     background-color: $body-color;

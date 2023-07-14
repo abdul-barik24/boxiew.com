@@ -1,8 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url(/node_modules/bootstrap/scss/bootstrap.scss);
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url(../node_modules/bootstrap/dist/css/bootstrap.css);
 body {
   font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .heading-title {
@@ -43,9 +51,6 @@ body {
 .text-style {
   color: #757575;
   font-size: 1rem;
-  text-align: justify;
-  -moz-text-align-last: left;
-       text-align-last: left;
 }
 
 .box-shadow {
@@ -119,15 +124,15 @@ body {
   cursor: pointer;
 }
 
-.button, .add-cart, .button-outline {
+.button, .add-cart, .button-light, .button-outline {
   color: #ffffff;
   background-color: #7e3ff2;
   border-radius: 1rem;
-  padding: 0.3rem 2rem;
+  padding: 0.3rem 1.5rem;
   transition: 0.3s;
   cursor: pointer;
 }
-.button:hover, .add-cart:hover, .button-outline:hover {
+.button:hover, .add-cart:hover, .button-light:hover, .button-outline:hover {
   background-color: #6002EE;
 }
 
@@ -138,6 +143,14 @@ body {
 }
 .button-outline:hover {
   color: #ffffff;
+}
+
+.button-light {
+  background-color: #ffffff;
+  color: #7e3ff2;
+}
+.button-light:hover {
+  background-color: #f4f4f4;
 }
 
 .add-cart {
@@ -354,14 +367,180 @@ body {
   margin-bottom: 50px;
 }
 
-ul {
-  list-style: none;
+#affiliate-cover-img {
+  margin-top: 5rem;
+}
+#affiliate-cover-txt .cover-text {
+  top: 24%;
 }
 
-a {
-  text-decoration: none;
+#affiliate-support .support-wrapping .support {
+  width: 18rem;
+}
+#affiliate-support .support-wrapping .support img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
+#affiliate-promote {
+  background-color: #7e3ff2;
+}
+#affiliate-promote .title-style {
+  color: #ffffff;
+}
+#affiliate-promote .text-style {
+  color: #d4d4d4;
+}
+
+#affiliate-community {
+  margin-top: 3.125rem;
+}
+#affiliate-community .community-wrapping .community-cover .card-text {
+  max-width: 23rem;
+}
+#affiliate-position {
+  margin-bottom: 3.125rem;
+}
+#affiliate-position .levels .card {
+  transition: 0.3s;
+}
+#affiliate-position .levels .card:hover {
+  box-shadow: 1px 1px 5px #c9c7c7;
+}
+
+@media (min-width: 0rem) {
+  #affiliate-cover-img .bg-image {
+    height: 12.5rem;
+  }
+  #affiliate-cover-txt .cover-text {
+    top: 13.3%;
+  }
+  #affiliate-cover-txt .cover-text p {
+    width: 222px;
+  }
+  #affiliate-support .support img {
+    width: 4.5rem !important;
+    height: 4.5rem !important;
+  }
+  #affiliate-support .support p {
+    visibility: hidden;
+  }
+  #affiliate-support .support .card-body {
+    height: 5rem;
+  }
+  #affiliate-join p, #affiliate-promote p, #affiliate-earn p {
+    text-align: justify;
+    -moz-text-align-last: left;
+         text-align-last: left;
+  }
+  #affiliate-community .community-cover {
+    height: 10rem !important;
+  }
+  #affiliate-community .community-cover img {
+    height: 100% !important;
+  }
+  #affiliate-community .community-cover .sm-txt {
+    margin-top: -0.5rem;
+    color: #7e3ff2;
+  }
+}
+@media (min-width: 36rem) {
+  #affiliate-cover-txt .cover-text {
+    top: 14.3%;
+  }
+  #affiliate-cover-txt .cover-text p {
+    width: 16.25rem;
+  }
+}
+@media (min-width: 48rem) {
+  #affiliate-cover-img .bg-image {
+    height: 15.5rem;
+  }
+  #affiliate-cover-txt .cover-text {
+    top: 17.5%;
+  }
+  #affiliate-cover-txt .cover-text p {
+    width: 21rem;
+  }
+  #affiliate-support .support img {
+    width: 6.5rem !important;
+    height: 6.5rem !important;
+  }
+  #affiliate-support .support p {
+    visibility: visible !important;
+  }
+  #affiliate-support .support .card-body {
+    height: 5rem;
+  }
+}
+@media (min-width: 62rem) {
+  #affiliate-cover-img .bg-image {
+    height: 22.5rem;
+  }
+  #affiliate-cover-txt .cover-text {
+    top: 23.3%;
+  }
+  #affiliate-cover-txt .cover-text p {
+    width: 21rem;
+  }
+  #affiliate-community .sm-txt {
+    visibility: hidden;
+  }
+}
+@media (min-width: 75rem) {
+  #affiliate-cover-img .bg-image {
+    height: 26.5rem;
+  }
+  #affiliate-cover-txt .cover-text {
+    top: 23.3%;
+  }
+  #affiliate-cover-txt .cover-text p {
+    width: 27rem;
+  }
+  #affiliate-support .support img {
+    width: 8rem !important;
+    height: 8rem !important;
+  }
+  #affiliate-support .support p {
+    visibility: visible !important;
+  }
+  #affiliate-support .support .card-body {
+    height: 5rem;
+  }
+}
+@media (min-width: 87.5rem) {
+  #affiliate-cover-img .bg-image {
+    height: 34.375rem;
+  }
+  #affiliate-cover-txt .cover-text {
+    top: 30%;
+  }
+  #affiliate-cover-txt .cover-text p {
+    width: 31rem;
+  }
+  #affiliate-support {
+    margin-top: 5rem !important;
+  }
+  #affiliate-support .support img {
+    width: 10rem !important;
+    height: 10rem !important;
+  }
+  #affiliate-support .support p {
+    visibility: visible !important;
+  }
+  #affiliate-support .support .card-body {
+    height: 5rem;
+  }
+  #affiliate-join {
+    margin-top: 5rem !important;
+  }
+  #affiliate-community .sm-txt {
+    visibility: visible;
+  }
+}
 nav {
   height: 5rem !important;
   background-color: #ffffff;
@@ -385,11 +564,11 @@ nav div div ul li a:hover {
 nav div div ul li .sign-in {
   margin-right: 0.625rem;
 }
-nav div div ul li .add-listing-icon {
-  margin-left: 0.625rem;
-}
 nav div div ul li div a {
   color: #7e3ff2 !important;
+}
+nav div div ul li div a:hover {
+  color: white !important;
 }
 nav div div ul li img {
   width: 1.01rem;
@@ -614,14 +793,16 @@ nav div div ul li img {
 #footer .container .footer-wrapping .boxiew .logo {
   padding-bottom: 3.125rem;
 }
-#footer .container .footer-wrapping .boxiew .contact-info {
+#footer .container .footer-wrapping .boxiew .contact-info a {
   color: #d4d4d4;
+  font-size: 1rem;
+  transition: 0.3s;
 }
-#footer .container .footer-wrapping .boxiew .contact-info div {
-  padding-bottom: 0.625rem;
+#footer .container .footer-wrapping .boxiew .contact-info a i {
+  margin-right: 0.625rem;
 }
-#footer .container .footer-wrapping .boxiew .contact-info div i {
-  padding-right: 0.625rem;
+#footer .container .footer-wrapping .boxiew .contact-info a:hover {
+  color: #ffffff;
 }
 #footer .container .footer-wrapping .info-link a {
   color: #d4d4d4;
@@ -652,4 +833,80 @@ nav div div ul li img {
 #footer .container .footer-wrapping .follow-us .social-link a i:hover {
   color: #ffffff;
   transform: scale(1.3);
+}
+
+@media (min-width: 0rem) {
+  body h1, body h2, body h3 {
+    font-size: 100%;
+  }
+  body h4, body h5, body h6 {
+    font-size: 90%;
+  }
+  body p {
+    font-size: 85% !important;
+  }
+  body a {
+    font-size: 82%;
+  }
+  body .button .button-light {
+    padding: 0.2rem 1rem;
+  }
+  #footer a {
+    font-size: 80% !important;
+  }
+}
+@media (min-width: 36rem) {
+  h4, h5, h6 {
+    font-size: 95%;
+  }
+}
+@media (min-width: 48rem) {
+  body h1, body h2, body h3 {
+    font-size: 130%;
+  }
+  body h4, body h5, body h6 {
+    font-size: 100%;
+  }
+  body p {
+    font-size: 95% !important;
+  }
+  body a {
+    font-size: 90%;
+  }
+  body .button .button-light {
+    padding: 0.3rem 1.4rem;
+  }
+}
+@media (min-width: 62rem) {
+  body h1, body h2, body h3 {
+    font-size: 150%;
+  }
+  body p {
+    font-size: 100% !important;
+  }
+  body a {
+    font-size: 92%;
+  }
+  #footer a {
+    font-size: 85% !important;
+  }
+}
+@media (min-width: 75rem) {
+  body h1, body h2, body h3 {
+    font-size: 175%;
+  }
+  body a {
+    font-size: 100%;
+  }
+  body .button .button-light {
+    padding: 0.3rem 1.5rem;
+  }
+  #footer a {
+    font-size: 95% !important;
+  }
+}
+@media (min-width: 87.5rem) {
+  body h1, body h2, body h3 {
+    font-size: 200%;
+  }
 }/*# sourceMappingURL=style.min.css.map */
